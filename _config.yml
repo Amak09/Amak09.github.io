@@ -1,2 +1,3 @@
 name: Mak Dice, Extraordinary Gentleman
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
