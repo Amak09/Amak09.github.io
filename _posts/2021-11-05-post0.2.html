@@ -34,31 +34,18 @@ a:active {
 <li><a href="https://youtube.com" style="text-decoration:none">link text</a> </li>
 </ul>
   
-    <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!--
-      Create a Twitch.Embed object that will render
-      within the "twitch-embed" root element.
-    -->
-    <script type="text/javascript">
-      var embed = new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "cmgriffing",		//could change channel in js php ajax refresh *** <?php echo $x; ?>"
-        layout: "video",
-        autoplay: false,
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-        parent: ["embed.example.com", "othersite.example.com"]
-      });
-
-      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-      });
-    </script>
+ <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="SamplePlayerDivID"></div>
+<script type="text/javascript">
+  var options = {
+    width: 854,
+    height: 480,
+    channel: "shroud",
+    // Only needed if this page is going to be embedded on other websites
+    parent: ["embed.example.com", "othersite.example.com"]
+  };
+  var player = new Twitch.Player("SamplePlayerDivID", options);
+  player.setVolume(0.5);
+</script>
   </body>
 </html>
